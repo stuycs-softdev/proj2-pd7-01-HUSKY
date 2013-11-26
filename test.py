@@ -7,4 +7,3 @@ page = urllib2.urlopen("http://en.wikipedia.org/w/api.php?action=query&prop=revi
 
 test = json.load(page);
 
-print test["
