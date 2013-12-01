@@ -1,5 +1,5 @@
 import json
-from bs4 import bs4
+import bs4
 import urllib2
 import sys
 
