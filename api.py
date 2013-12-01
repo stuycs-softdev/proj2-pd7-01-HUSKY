@@ -9,12 +9,21 @@ def open(link):
     pages = dict[query]["pages"]
     text = pages.keys()[0]
     l = pages[text]["revisions"][0]["*"]
-    a = l.find("1.")
-    i = 0
-    while i < 5:
+    for x in range(1,100):
+        a = l.find(str(x)+'.')
         print l[a]
-        i = i + 1
         a = a + 1
+        b = 1
+        while b != 0:
+            if l[a] > '9' or (l[a] < '0' and l[a] > '.') or (l[a] < '.' and l[a] > ' ') or l[a] < ' ':
+                if l[a+1] > '9' or (l[a+1] < '0' and l[a+1] > '.') or (l[a+1] < '.' and l[a] > ' ') or l[a] < ' ':
+                    b = 0
+            if b == 0:
+                break
+            print l[a]
+            a = a + 1       
+      
+    
     
 
 
