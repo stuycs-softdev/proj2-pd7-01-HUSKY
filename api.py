@@ -15,9 +15,12 @@ def open(link):
         ret = ret + l[a]
         a = a + 1
         b = 1
+        if (l[a] > '9' and l[a] < 'x') or l[a] > 'x' or (l[a] < '0' and l[a] > '.') or (l[a] < '.' and l[a] > ' ') or l[a] < ' ' or l[a] == '}':
+                if (l[a+1] > '9' and l[a+1] < 'x') or l[a+1] > 'x' or (l[a+1] < '0' and l[a+1] > '.') or (l[a+1] < '.' and l[a+1] > ' ') or l[a+1] < ' ' or l[a+1] == '}':
+                    break
         while b != 0:
-            if l[a] > '9' or (l[a] < '0' and l[a] > '.') or (l[a] < '.' and l[a] > ' ') or l[a] < ' ':
-                if l[a+1] > '9' or (l[a+1] < '0' and l[a+1] > '.') or (l[a+1] < '.' and l[a] > ' ') or l[a] < ' ':
+            if (l[a] > '9' and l[a] < 'x') or l[a] > 'x' or (l[a] < '0' and l[a] > '.') or (l[a] < '.' and l[a] > ' ') or l[a] < ' ' or l[a] == '}':
+                if (l[a+1] > '9' and l[a+1] < 'x') or l[a+1] > 'x' or (l[a+1] < '0' and l[a+1] > '.') or (l[a+1] < '.' and l[a+1] > ' ') or l[a+1] < ' ' or l[a+1] == '}':
                     b = 0
             if b == 0:
                 break
