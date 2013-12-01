@@ -4,16 +4,102 @@
     <title> Rules of Chess </title>
     {% include "lib.html" %}
   </head>
-
+  
   <body style="background-image:url(http://strategiesforchess.com/wp-content/uploads/2013/04/Chess-Set-5.jpg)">
     {% include "navbar.html" %}
     <h1 align="center" style="color:WHITE"> Rules of Chess </h1>
     <h3 align="center" style="color:WHITE"> Courtesy of Wikipedia </h3>
+    <h3 align="center" style="color:WHITE"> Copied From Wikipedia </h3>
     <div align="center" style="color:WHITE">
       Original Link to Wikipedia Chess Rules Below:
       <br>
       <a href="http://en.wikipedia.org/wiki/Rules_of_chess" style="color:WHITE"> Rules of Chess </a>  
     </div>
+    <div align="center" style="color:white;padding:50px">
+      <h3> Gameplay </h3>
+      The player controlling the white pieces is named 'White'; the player controlling the black pieces is named 'Black'. White moves first, then players alternate moves. Making a move is required, it is not legal to skip a move, even when having to move is detrimental. Play continues until a king is checkmated, a player resigns, or a draw is declared, as explained below. In addition, if the game is being played under a time control players who exceed their time limit lose the game.
+      <br>
+      The official chess rules do not include a procedure for determining who plays White. Instead, this decision is left open to tournament-specific rules or, in the case of non-competitive play, mutual agreement, in which case some kind of random choice is often employed. The most ocmmon method is for one of the players to select one white piece and one black piece, the without the other player being able to see, he puts one piece in each hand (usually a pawn), closes each hand into a fist so the other player cannot see the piece in either hand, then allow the other player to pick one of his hands. Once a hand is chosen, the player opens both hands toshow he is holding one piece of each color, and the other player gets the color of the piece the hand he chose was holding. The two pieces are returned to the chessboard at their original locations and play begins with whichever player was white.
+    </div>
+    
+    <div align="center" style="color:white;padding:50px">
+      <h3> Movement </h3>
+      <h4> Basic Moves </h4>
+      <br>
+      Each chess piece has its own method of movement. Moves are made to vacant squares except when capturing an opponent's piece.
+      <br>
+      With the exception of any movement of the knight and the occasional castling maneuver, pieces cannot jump over each other. When a pieces is captured (or taken), the attacking piece replaces the enemy piece on its square. The captured piece is thus removed from the game and may not be returned to play for the remainder of the game. The king can be put in check but cannot be captured.
+      <br>
+      <h4> King </h4>
+      The king can move exactly on square horizontally, vertically, or diagonally. Only once per player, per game, is a king allowed to make a special move know as castling.
+      <br>
+      <h4> Rook </h4>
+      The rook moves any number of vacant squares vertically or horizontally. It also is moved while castling.
+      <br>
+      <h4> Bishop </h4>
+      The bishop moves any number of vacant squares in any diagonal direction.
+      <br>
+      <h4> Queen </h4>
+      The queen can move any number of vacant squares diagonally, horizontally, or vertically.
+      <br>
+      <h4> Knight </h4>
+      The knight moves to the nearest square not on the same rank, file, or diagonal. In other words, the knight moves two squares horizontally then one square vertically, or one square horizontally then two squares vertically. Its move is not blocked by other pieces; it jumps to the new location.
+      <br>
+      <h4> Pawns </h4>
+      Pawns have the most complex rules of movement:
+      A pawn can move forward one square, if that square is unoccupied. If it has not yet moved, each pawn has the option of moving two squares forward provided both squares in front of the pawn are unoccupied. A pawn cannot move backwards.
+      Pawns are the only pieces that capture differently from how they move. They can capture an enemy piece on either of the two spaces adjacent to the space in fron of them but cannot move to these spaces if they are vacant.
+    </div>
+    
+    <div style="color:white;padding:50px" align="center">
+      <h3> Check </h3>
+      A king is in check when it is under attack by one or more enemy pieces. A piece unable to move because it would place its own king in check may still deliver check to the opposing player.
+      A player may not make any move which places or leaves his king in check.
+      The possible ways to get out of check are:
+      <ul>
+	<li> Move the king to a square where it is not threatened. </li>
+	<li> Capture the threatening piece (possibly with the king). </li>
+	<li> Block the check by placing a piece between the king and the opponent's threatening piece. </li>
+      </ul>
+      If it is not possible to get out of check, the king is checkmated and the game is over.
+
+      In informal games, it is customary to announce 'check' when making a move that puts the opponent's king in check. However, in formal competitions check is rarely announced.
+    </div>
+    
+    <div style="color:white;padding:50px" align="center">
+      <h3> End of the game </h3>
+      <br>
+      <h4> Checkmate </h4>
+      If a player's king is placed in check and there is no legal move that player can make to escape check, then the king is said to be checkmated, the game ends, and that player loses. Unlike other pieces, the king is never actually captured or removed from the board because checkmate ends the game.
+      <br>
+      <h4> Resigning </h4>
+      Either player may resign at any time and their opponenet wins the game. This normally happens when the player believes he or she is very likely to lose the game. A player may resign by saying it verbally or by indicating it on their scoresheet in any of three ways:
+      <ol>
+	<li> by writing 'resigns', </li>
+	<li> by circling the result of the game, </li>
+	<li> by writing '1-0' if Black resigns or '0-1' if White resigns. </li>
+      </ol>
+      Tipping over the king also indicates resignation, but it is not frequently used (and should be distinguished from accidentally knocking the king over). Stopping both clocks is not an indication of resigning, since clocks can be stopped to call the arbiter. An offer of a handshake is not necessarily a resignation either, since one player could think they are agreeing to a draw.
+      <br>
+      <h4> Draws </h4>
+      The game ends in a draw if any of these conditions occur:
+      <ul>
+	<li> The game is automatically a draw if the player to move is not in check but has no legal move. This situation is called a stalemate. An example of such a position is shown in the diagram to the right. </li>
+	<li> The game is immediately drawn when there is no possibility of checkmate for either side with any series of legal moves. This draw is often due to insufficient material, including the endgames: </li>
+	<ol>
+	  <li> king against king; </li>
+	  <li> king against king and bishop; </li>
+	  <li> king against king and knight; </li>
+	  <li> king and bishop against king and bishop, with both bishops on squares of the same color. </li>
+	</ol>
+	<li> Both players agree to a draw after one of the players makes such an offer. </li>
+      </ul>
+      The player having the move may claim a draw by declaring that one of the following conditions exists, or by declaring an intention to make a move which will bring about one of these conditions:
+      <ul>
+	<li> Fifty-move rule: There has been no capture or pawn move in the last fifty moves by each player. </li>
+	<li> Threefold repetition: The same board position has occurred three times with the same player to move and all pieces having the same rights to move, including the right to castle or capture <i>en passant</i>. </li>
+      </ul>
+      If the claim is prove true, the game is a draw.
   </body>
 </html>
   
