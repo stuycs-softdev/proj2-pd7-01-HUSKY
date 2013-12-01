@@ -9,9 +9,10 @@ def open(link):
     pages = dict[query]["pages"]
     text = pages.keys()[0]
     l = pages[text]["revisions"][0]["*"]
+    ret = ""
     for x in range(1,100):
         a = l.find(str(x)+'.')
-        print l[a]
+        ret = ret + "," + l[a]
         a = a + 1
         b = 1
         while b != 0:
@@ -20,9 +21,9 @@ def open(link):
                     b = 0
             if b == 0:
                 break
-            print l[a]
-            a = a + 1       
-      
+            ret = ret + "," + l[a]
+            a = a + 1    
+      print ret
     
     
 
