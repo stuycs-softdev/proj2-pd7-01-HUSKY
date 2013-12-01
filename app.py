@@ -11,13 +11,13 @@ def home():
         return render_template("home.html")
     else:
         convert(request.form["url"])
-
+        
 @app.route('/converter/<link>', methods = ['GET', 'POST'])
 def convert(link):
     try:
         if checklink(link):
             a = api.findNotation(link)
-            d = convertNotation(a)
+            d = converter.convertNotation(a)
             if request.method == "GET":
                 return render_template("convert.html", d=d, link=link, m="o", a=a)
             else:
