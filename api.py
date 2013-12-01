@@ -34,7 +34,7 @@ def findNotation(link):
                 if l[a+1] == '.' and (l[a+2] > 'a' and l[a+2] < 'z' or l[a+2] > 'A' and l[a+2] < 'Z' or l[a+2] == ' ' ):
                     break
             if l[a] == '.':
-                if l[a-1] != str(x):
+                if l[a-1] != str(x) and l[a+1] != '.' and l[a-1] != '.':
                     break                 
             ret = ret + l[a]
             a = a + 1 
