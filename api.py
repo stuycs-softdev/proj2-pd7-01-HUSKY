@@ -3,7 +3,8 @@ import urllib2
 import unicodedata
 
 def findNotation(link):
-    page = urllib2.urlopen(link)
+    path = link[link.find("/wiki/")+6:]
+    page = urllib2.urlopen("http://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&titles=" + path)
     dict = json.load(page)
     query = dict.keys()[1]
     pages = dict[query]["pages"]
@@ -40,4 +41,4 @@ def findNotation(link):
     
 
 
-findNotation("http://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&titles=Discovered_attack")
+findNotation("http://en.wikipedia.org/wiki/Discovered_attack")
