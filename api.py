@@ -12,7 +12,9 @@ def findNotation(link):
     query = dict.keys()[1]
     pages = dict[query]["pages"]
     text = pages.keys()[0]
-    l = pages[text]["revisions"][0]["*"]
+    c = pages[text]["revisions"][0]["*"]
+    l = c.encode('utf-8','ignore')
+    print l
     #finds the algebraic notation
     ret = ""
     for x in range(1,100):
@@ -21,7 +23,7 @@ def findNotation(link):
         if a == -1:
             break
         ret = ret + l[a]
-        a = a + 1        
+        a = a + 1
         while b != 0:
             if (l[a] > '9' and l[a] < 'A') or (l[a] > 'A' and l[a] < 'Z') or (l[a] > 'Z' and l[a] < 'a') or (l[a] > 'a' and l[a] < 'x') or l[a] > 'x' or (l[a] < '0' and l[a] > '.') or (l[a] < '.' and l[a] > ' ') or l[a] < ' ' or l[a] == '}':
                 if (l[a+1] > '9' and l[a+1] < 'A') or (l[a+1] > 'A' and l[a+1] < 'Z') or (l[a+1] > 'Z' and l[a+1] < 'a') or (l[a+1] > 'a' and l[a+1] < 'x') or l[a+1] > 'x' or (l[a+1] < '0' and l[a+1] > '.') or (l[a+1] < '.' and l[a+1] > ' ') or l[a+1] < ' ' or l[a+1] == '}':
@@ -34,10 +36,10 @@ def findNotation(link):
                 if l[a+1] == '.' and (l[a+2] > 'a' and l[a+2] < 'z' or l[a+2] > 'A' and l[a+2] < 'Z' or l[a+2] == ' ' ):
                     break
             if l[a] == '.':
-                if l[a-1] != str(x) and l[a+1] != '.' and l[a-1] != '.':
-                    break                 
+                if l[a-1] != str(x) and l[a-1] != '.' and l[a+1] != '.':
+                    break
             ret = ret + l[a]
-            a = a + 1 
+            a = a + 1
     print ret
 
    
