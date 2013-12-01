@@ -12,7 +12,7 @@ def open(link):
     ret = ""
     for x in range(1,100):
         a = l.find(str(x)+'.')
-        ret = ret + "," + l[a]
+        ret = ret + l[a]
         a = a + 1
         b = 1
         while b != 0:
@@ -21,9 +21,9 @@ def open(link):
                     b = 0
             if b == 0:
                 break
-            ret = ret + "," + l[a]
+            ret = ret + l[a]
             a = a + 1    
-      print ret
+    print ret
     
     
 
