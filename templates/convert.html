@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "lib.html" %}
+    <title> Converter </title>
+  </head>
+  
+  <body>
+    {% include "navbar.html" %}
+    <h3> Original URL: {{link}}</h3>
+    <form method="POST">
+      <button type="submit" name="Descriptive"> Descriptive Notation </button>
+      <button type="submit" name="original"> Algebraic Notation </button>
+      <button type="submit" name="Both"> Both Notations </button>
+    </form>
+    <div>
+      {% if m == "o" %}
+      <h3> Algebraic Notation </h3>
+      <ul>
+	{% for x in d %}
+	<li> x </li>
+	{% endfor %}
+      </ul>
+      
+      {% elif m == "d"}
+      <h3> Descriptive Notation </h3>
+      <ul>
+	{% for x in d %}
+	<li> x </li>
+	{% endfor %}
+      </ul>
+      
+      {% else %}
+      <div> 
+	<h3> Algebraic Notation </h3>
+	<ul>
+	{% for x in d['orig'] %}
+	<li> x </li>
+	{% endfor %}
+	</ul>
+      </div>
+      <div>
+	<h3> Descriptive Notations </h3>
+	<ul>
+	  {% for x in d['desc'] %}
+	  <li> x </li>
+	  {% endfor %}
+	</ul>
+      </div>
+    </div>
+  </body>
+</html>
