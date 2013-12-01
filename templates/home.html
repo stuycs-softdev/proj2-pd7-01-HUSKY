@@ -7,12 +7,19 @@
   
   <body>
     {% include "navbar.html" %}
-    <h1 align="center"> Header 1 </h1>
+    <h1 align="center"> Chess Notation Converter </h1>
+    <div align="center">Enter a wikipedia url containing a series of chess moves to convert from Algeraic Notation to Descriptive Notation. </div>
+    <br>
     <div align="center">
     <form method="POST">
       Url: <input type="text" name="url">
       <button class="btn" name="button" value="Go" >Go </button>
     </form>
+    
+    <h3 align="center"> Examples of links with Chess Notation </h3>
+    <ul>
+      <li> <a href="https://en.wikipedia.org/wiki/Discovered_attack"> https://en.wikipedia.org/wiki/Discovered_attack </a> </li>
+      <li> </li>
     </div>
   </body>
 </html>

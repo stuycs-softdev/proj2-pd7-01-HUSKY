@@ -10,8 +10,12 @@ def home():
     if request.method == "GET":
         return render_template("home.html")
     else:
-        convert(request.form["url"])
+        return convert(request.form['url'])
         
+@app.route('/rules')
+def rules():
+    return render_template("rules.html")
+
 @app.route('/converter/<link>', methods = ['GET', 'POST'])
 def convert(link):
     try:
