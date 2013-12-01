@@ -34,7 +34,7 @@ def convert(link):
         return redirect(url_for('home'))
 
 def checklink(link):
-    d = api.findNot(link)
+    d = api.findNotation(link)
     return len(0) != 0
 
 if __name__ == "__main__":
