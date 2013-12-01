@@ -5,15 +5,17 @@
     <title> Converter </title>
   </head>
   
-  <body>
+  <body style="background-image:url(http://strategiesforchess.com/wp-content/uploads/2013/04/Chess-Set-5.jpg)">
     {% include "navbar.html" %}
-    <h3> Original URL: {{link}}</h3>
-    <form method="POST">
-      <button type="submit" name="Descriptive"> Descriptive Notation </button>
-      <button type="submit" name="original"> Algebraic Notation </button>
-      <button type="submit" name="Both"> Both Notations </button>
-    </form>
-    <div>
+    <div style="color:white" align="center">
+      <h3> Original URL: {{link}}</h3>
+      <form method="POST">
+	<button type="submit" name="Descriptive"> Descriptive Notation </button>
+	<button type="submit" name="original"> Algebraic Notation </button>
+	<button type="submit" name="Both"> Both Notations </button>
+      </form>
+    </div>
+    <div style="color:white" align="center">
       {% if m == "o" %}
       <h3> Algebraic Notation </h3>
       <ul>
@@ -29,9 +31,9 @@
 	<li> x </li>
 	{% endfor %}
       </ul>
-      
-      {% else %}
-      <div> 
+    </div>
+    {% else %}
+      <div style="color:white" align="center"> 
 	<h3> Algebraic Notation </h3>
 	<ul>
 	{% for x in a %}
@@ -39,7 +41,7 @@
 	{% endfor %}
 	</ul>
       </div>
-      <div>
+      <div style="color:white" align="center">
 	<h3> Descriptive Notations </h3>
 	<ul>
 	  {% for x in d %}
