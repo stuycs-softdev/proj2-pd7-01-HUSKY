@@ -18,7 +18,7 @@ def findNotation(link):
         if (l[a] > '9' and l[a] < 'A') or (l[a] > 'A' and l[a] < 'Z') or (l[a] > 'Z' and l[a] < 'a') or (l[a] > 'a' and l[a] < 'z') or l[a] > 'z' or (l[a] < '0' and l[a] > '.') or (l[a] < '.' and l[a] > ' ') or l[a] < ' ' or l[a] == '}':
             if (l[a+1] > '9' and l[a+1] < 'A') or (l[a+1] > 'A' and l[a+1] < 'Z') or (l[a+1] > 'Z' and l[a+1] < 'a') or (l[a+1] > 'a' and l[a+1] < 'x') or l[a+1] > 'x' or (l[a+1] < '0' and l[a+1] > '.') or (l[a+1] < '.' and l[a+1] > ' ') or l[a+1] < ' ' or l[a+1] == '}':
                 if (l[a+2] > '9' and l[a+2] < 'A') or (l[a+2] > 'A' and l[a+2] < 'Z') or (l[a+2] > 'Z' and l[a+2] < 'a') or (l[a+2] > 'a' and l[a+2] < 'x') or l[a+2] > 'x' or (l[a+2] < '0' and l[a+2] > '.') or (l[a+2] < '.' and l[a+2] > ' ') or l[a+2] < ' ' or l[a+2] == '}':
-                        if (l[a+3] > '9' and l[a+3] < 'A') or (l[a+3] > 'A' and l[a+3] < 'Z') or (l[a+3] > 'Z' and l[a+3] < 'a') or (l[a+3] > 'a' and l[a+3] < 'x') or l[a+3] > 'x' or (l[a+3] < '0' and l[a+3] > '.') or (l[a+3] < '.' and l[a+3] > ' ') or l[a+3] < ' ' or l[a+3] == '}':
+                    if (l[a+3] > '9' and l[a+3] < 'A') or (l[a+3] > 'A' and l[a+3] < 'Z') or (l[a+3] > 'Z' and l[a+3] < 'a') or (l[a+3] > 'a' and l[a+3] < 'x') or l[a+3] > 'x' or (l[a+3] < '0' and l[a+3] > '.') or (l[a+3] < '.' and l[a+3] > ' ') or l[a+3] < ' ' or l[a+3] == '}':
                             break
         while b != 0:
             if (l[a] > '9' and l[a] < 'A') or (l[a] > 'A' and l[a] < 'Z') or (l[a] > 'Z' and l[a] < 'a') or (l[a] > 'a' and l[a] < 'z') or l[a] > 'z' or (l[a] < '0' and l[a] > '.') or (l[a] < '.' and l[a] > ' ') or l[a] < ' ' or l[a] == '}':
@@ -28,6 +28,9 @@ def findNotation(link):
                             b = 0
             if b == 0:
                 break
+            if l[a] > '0' and l[a] < '9':
+                if l[a+1] == '.':
+                    break
             ret = ret + l[a]
             a = a + 1    
     print ret
