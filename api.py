@@ -2,14 +2,18 @@ import json
 import urllib2
 import unicodedata
 
+#finds all the algebraic notation in the article, returns a list
 def findNotation(link):
+    #makes the list compatible with mediawiki api
     path = link[link.find("/wiki/")+6:]
     page = urllib2.urlopen("http://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&titles=" + path)
+    #gets the article out of the page returned by mediawiki
     dict = json.load(page)
     query = dict.keys()[1]
     pages = dict[query]["pages"]
     text = pages.keys()[0]
     l = pages[text]["revisions"][0]["*"]
+    #finds the algebraic notation
     ret = ""
     for x in range(1,100):
         a = l.find(str(x)+'.')
