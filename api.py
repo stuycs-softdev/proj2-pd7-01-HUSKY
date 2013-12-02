@@ -48,6 +48,7 @@ def findNotation(link):
                 ret = ret + l[a]
                 a = a + 1
                 l = l[:temp+1] + ' ' + l[temp+2:]
+    ret = ret.split()
     print ret
 
    
