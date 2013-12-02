@@ -56,4 +56,4 @@ def findNotation(link):
     
 
 
-findNotation("http://en.wikipedia.org/wiki/Queen's_Gambit")
+findNotation("http://en.wikipedia.org/wiki/Discovered_attack")
