@@ -2,7 +2,8 @@
 #takes algebraic notation as a list
 #TODO: intelligent conversion
 
-ranks = ['abcdefhg']
+
+ranks = 'abcdefhg'
 
 class Game:
 	def __init__(self):
@@ -15,6 +16,23 @@ class Game:
 
 def lazyConversionF(filteredMove):
 	moveTokens = filteredMove.split(' ')
+
+def moveTokenConv(moveToken, isWhite):
+	if moveToken == '0-0' or moveToken == 'O-O' or moveToken == '0-0-0' or moveToken == 'O-O-O':
+		return moveToken
+	if 'x' in moveToken:
+		sourceDest = moveToken.split('x')
+		print sourceDest
+		
+		if len(sourceDest[0]) == 1:
+			if sourceDest[0] in ranks: #pawn capture
+				print sourceDest[0]
+				return 'Px' + convertSquare(sourceDest[1][:2], isWhite) + sourceDest[1][2:]
+
+			elif sourceDest[0] in 'RNBQK':#ordinary capture with ambiguity resolved by game state
+				return sourceDest[0] + 'x' + convertSquare(sourceDest[1][:2], isWhite) + sourceDest[1][2:]
+				
+	
 
 def convertSquare(square, isWhite):
 	if isWhite:
