@@ -51,9 +51,6 @@ def findNotation(link):
     ret = ret.split()
     print ret
 
-   
-    
-    
 
 
-findNotation("http://en.wikipedia.org/wiki/Discovered_attack")
+findNotation("http://en.wikipedia.org/wiki/Sicilian_Defence")
