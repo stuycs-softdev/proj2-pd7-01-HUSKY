@@ -43,7 +43,7 @@ def findNotation(link):
                     b = 0
                 if b == 0:
                     break
-                #This breaks the function once you hit the next move and also
+                #This breaks the function once you hit the next move
                 if l[a] > '0' and l[a] < '9':
                     if l[a+1] == '.' and (l[a+2] > 'a' and l[a+2] < 'z' or l[a+2] > 'A' and l[a+2] < 'Z' or l[a+2] == ' ' ):
                         break
