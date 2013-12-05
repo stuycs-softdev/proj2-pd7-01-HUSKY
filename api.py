@@ -20,16 +20,17 @@ def cleanMoves(string):
         string = string[2:]
     i = len(string) - 1
     while (1):
-        if (string[i:i+1] > ' ' and string [i:i+1] < '0') or (string[i:i+1] > '9' and string[i:i+1] < 'A'):
+        s = string[i:i+1]
+        if (s > ' ' and s < '0') or (s > '9' and s < 'A'):
             string = string[:i]
             i = i - 1
         else:
             break
     i = 0
     while (1):
-        if (string[i:i+1] > ' ' and string [i:i+1] < '0') or (string[i:i+1] > '9' and string[i:i+1] < 'A'):
+        s = string[i:i+1]
+        if (s > ' ' and s < '0') or (s > '9' and s < 'A'):
             string = string[i+1:]
-            i = i + 1
         else:
             break
     return string
