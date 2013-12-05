@@ -25,7 +25,7 @@ def findNotation(link):
         a = l.find(str(x)+'.')
         #b's only purpose is to break the function via while loops
         b = 1
-        if a == -1 or l[a-1] > 'a' and l[a-1] < 'z':
+        if a == -1 or l[a-1] >= 'a' and l[a-1] <= 'z':
             x = x + 1
         else:
             ret = ret + ' ' + l[a]
@@ -44,8 +44,8 @@ def findNotation(link):
                 if b == 0:
                     break
                 #This breaks the function once you hit the next move
-                if l[a] > '0' and l[a] < '9':
-                    if l[a+1] == '.' and (l[a+2] > 'a' and l[a+2] < 'z' or l[a+2] > 'A' and l[a+2] < 'Z' or l[a+2] == ' ' ):
+                if l[a] >= '0' and l[a] <= '9':
+                    if l[a+1] == '.' and (l[a+2] >= 'a' and l[a+2] <= 'z' or l[a+2] >= 'A' and l[a+2] <= 'Z' or l[a+2] == ' ' ):
                         break
                 #This breaks if there extra "."s in the notation but also allows
                 #for "..."s in the chess notation
@@ -58,8 +58,8 @@ def findNotation(link):
                 l = l[:temp+1] + ' ' + l[temp+2:]
     #breaks up the string of notation into a list, returns it
     ret = ret.split()
-    return ret
+    print ret
 
 
 
- print findNotation("http://en.wikipedia.org/wiki/Discovered_attack")
+findNotation("http://en.wikipedia.org/wiki/Discovered_attack")
