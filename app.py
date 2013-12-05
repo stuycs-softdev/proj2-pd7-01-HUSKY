@@ -10,7 +10,11 @@ def home():
     if request.method == "GET":
         return render_template("home.html")
     else:
-        return convert(request.form['url'])
+        link = request.form['url']
+        if checklink(link):
+            convert(link)
+        else:
+            return render_template("noconvert.html", url=link)
         
 @app.route('/rules')
 def rules():
@@ -38,6 +42,7 @@ def convert(link):
 
 def checklink(link):
     a = api.findNotation(link)
+    print a
     return len(a) != 0
 
 if __name__ == "__main__":
