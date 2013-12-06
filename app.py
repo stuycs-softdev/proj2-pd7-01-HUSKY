@@ -29,12 +29,12 @@ def convert():
         a = api.findNotation(link)
         #        d = converter.convertNotation(a)
         if request.method == "GET":
-            return render_template("convert.html", link=link, m="o", a=a)
+            return render_template("convert.html", link=link, m="a", a=a)
         else:
-            if request.form['button'] == "Descriptive":
+            if request.form['button'] == "a":
+                return render_template("convert.html", a=a, link=link, m="a")
+            elif request.form['button'] == "d":
                 return render_template("convert.html", a=a, link=link, m="d")
-            elif request.form['button'] == "original":
-                return render_template("convert.html", a=a, link=link, m="o")
             else:
                 return render_template("convert.html", a=a, link=link, m="b")
     else:

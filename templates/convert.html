@@ -11,20 +11,22 @@
     <div class="div">
       <h3> Original URL: {{link}}</h3>
       <form method="POST">
-	<button type="submit" name="Descriptive"> Descriptive Notation </button>
-	<button type="submit" name="original"> Algebraic Notation </button>
-	<button type="submit" name="Both"> Both Notations </button>
+	<button type="submit" name="button" value="a"> Algebraic Notation</button>
+	<button type="submit" name="button" value="d"> Descriptive Notation</button>
+	<button type="submit" name="button" value="b"> Both Notations</button>
       </form>
     </div>
     <div class="div">
-      {% if m == "o" %}
+      {% if m == "a" %}
       <h3> Algebraic Notation </h3>
+      {% elif m == "d" %}
+      <h3> Descriptive Notation </h3>
+      {% endif %}
       <ul>
 	{% for x in a %}
-	<li> {{x}} </li>
+	<li style="font-size:20px"> {{x}} </li>
 	{% endfor %}
       </ul>
-      {% endif %}
     </div>
   </body>
 
