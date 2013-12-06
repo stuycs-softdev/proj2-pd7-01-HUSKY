@@ -21,35 +21,11 @@
       <h3> Algebraic Notation </h3>
       <ul>
 	{% for x in a %}
-	<li> x </li>
+	<li> {{x}} </li>
 	{% endfor %}
       </ul>
-      
-      {% elif m == "d"}
-      <h3> Descriptive Notation </h3>
-      <ul>
-	{% for x in d %}
-	<li> x </li>
-	{% endfor %}
-      </ul>
-    </div>
-    {% else %}
-      <div class="div">
-	<h3> Algebraic Notation </h3>
-	<ul>
-	{% for x in a %}
-	<li> x </li>
-	{% endfor %}
-	</ul>
-      </div>
-      <div class="div">
-	<h3> Descriptive Notations </h3>
-	<ul>
-	  {% for x in d %}
-	  <li> x </li>
-	  {% endfor %}
-	</ul>
-      </div>
+      {% endif %}
     </div>
   </body>
+
 </html>
