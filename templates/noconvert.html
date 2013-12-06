@@ -2,13 +2,16 @@
 <html>
   <head>
     <title> Converter </title>
-    {% include lib.html %}
+    {% include "lib.html" %}
   </head>
   
-  <body style="background-image:url(http://strategiesforchess.com/wp-content/uploads/2013/04/Chess-Set-5.jpg)">
-    <div style="color:white">
+  <body>
+    {% include "navbar.html" %}
+    <div class="div">
       Original Url: {{url}}
+      <br>
       This link did not contain a set of chess moves to convert...
+      <br>
       So why are you running this program???
     </div>
   </body>

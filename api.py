@@ -70,8 +70,6 @@ def findNotation(link):
                 x = x + 2
             else:
                 x = x + 1
-    
-    print final
-    ret = ""
+    return final
 
 findNotation("http://en.wikipedia.org/wiki/Discovered_attack")

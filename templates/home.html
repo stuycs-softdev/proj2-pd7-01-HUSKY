@@ -5,22 +5,24 @@
     {% include "lib.html" %}
   </head>
   
-  <body style="background-image:url(http://strategiesforchess.com/wp-content/uploads/2013/04/Chess-Set-5.jpg)">
+  <body>
     {% include "navbar.html" %}
-    <h1 align="center" style="color:white"> Chess Notation Converter </h1>
-    <div align="center" style="color:white"> Enter a wikipedia url containing a series of chess moves to convert from Algeraic Notation to Descriptive Notation. </div>
+    <h1> Chess Notation Converter </h1>
+    <div class="div"> 
+      Enter a wikipedia url containing a series of chess moves to convert from Algeraic Notation to Descriptive Notation. 
+    </div>
     <br>
-    <div align="center" style="color:white">
+    <div class="div">
       <form method="POST">
-      Url: <input type="text" name="url">
-      <button class="btn" name="button" value="Go" >Go </button>
+	Url: <input type="text" name="url">
+	<button class="btn" name="button" value="Go" >Go </button>
       </form>
     </div>
     
-    <div style="color:white" align="center">
+    <div class="div">
       <h3> Examples of links with Chess Notation </h3>
       <ul>
-	<li> <a style="color:white" href="https://en.wikipedia.org/wiki/Discovered_attack"> https://en.wikipedia.org/wiki/Discovered_attack </a> </li>
+	<li> <a href="https://en.wikipedia.org/wiki/Discovered_attack"> https://en.wikipedia.org/wiki/Discovered_attack </a> </li>
       </ul>
     </div>
   </body>
