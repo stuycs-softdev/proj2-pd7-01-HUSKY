@@ -11,7 +11,7 @@ def isMove(string):
             num = True
         if x.isalpha():
             alpha = True
-        if (x >= '!' and x <= '*') or (x > '9' and x < '?') or x == '@' or x == '-' or x == '/':
+        if (x >= '!' and x <= '*') or (x > '9' and x < '?') or (x > 'Z' and x < 'a') or (x > 'z' and x <= '~') or x == '@' or x == '-' or x == '/':
             other = True
     return num and alpha and not other
 
@@ -71,5 +71,3 @@ def findNotation(link):
             else:
                 x = x + 1
     return final
-
-findNotation("http://en.wikipedia.org/wiki/Discovered_attack")
