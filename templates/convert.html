@@ -3,52 +3,31 @@
   <head>
     {% include "lib.html" %}
     <title> Converter </title>
+    <link type=
   </head>
   
-  <body style="background-image:url(http://strategiesforchess.com/wp-content/uploads/2013/04/Chess-Set-5.jpg)">
+  <body>
     {% include "navbar.html" %}
-    <div style="color:white" align="center">
+    <div class="div">
       <h3> Original URL: {{link}}</h3>
       <form method="POST">
-	<button type="submit" name="Descriptive"> Descriptive Notation </button>
-	<button type="submit" name="original"> Algebraic Notation </button>
-	<button type="submit" name="Both"> Both Notations </button>
+	<button type="submit" name="button" value="a"> Algebraic Notation</button>
+	<button type="submit" name="button" value="d"> Descriptive Notation</button>
+	<button type="submit" name="button" value="b"> Both Notations</button>
       </form>
     </div>
-    <div style="color:white" align="center">
-      {% if m == "o" %}
+    <div class="div">
+      {% if m == "a" %}
       <h3> Algebraic Notation </h3>
-      <ul>
-	{% for x in a %}
-	<li> x </li>
-	{% endfor %}
-      </ul>
-      
-      {% elif m == "d"}
+      {% elif m == "d" %}
       <h3> Descriptive Notation </h3>
+      {% endif %}
       <ul>
-	{% for x in d %}
-	<li> x </li>
+	{% for x in a %}
+	<li style="font-size:20px"> {{x}} </li>
 	{% endfor %}
       </ul>
-    </div>
-    {% else %}
-      <div style="color:white" align="center"> 
-	<h3> Algebraic Notation </h3>
-	<ul>
-	{% for x in a %}
-	<li> x </li>
-	{% endfor %}
-	</ul>
-      </div>
-      <div style="color:white" align="center">
-	<h3> Descriptive Notations </h3>
-	<ul>
-	  {% for x in d %}
-	  <li> x </li>
-	  {% endfor %}
-	</ul>
-      </div>
     </div>
   </body>
+
 </html>
